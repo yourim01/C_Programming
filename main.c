@@ -1,11 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 
-//extern void f1();
-extern void f2();
+extern unsigned random_i(void);
+extern double random_f(void);
+
+extern int MOD;
 
 int main(void)
 {
-	//f1();
-	f2();
-	return 0;
+    int i;
+
+    MOD = 32767;
+    for (i = 0; i < 10; i++)
+        printf("%d ", random_i());
+
+    return 0;
 }
